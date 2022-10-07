@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>카운슬링_프로젝트</title>
+        <style>
+            #template {
+                
+                visibility: hidden;
+                
+            }
+            
+            #list > #template {
+                visibility: initial;
+
+            }
+            a {
+                all: unset;
+                cursor: pointer;
+            }
+            .post-item {
+                display: block;
+                margin:20px;
+                padding:20px;
+                border-radius: 5px gray;
+                box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+                        }
+            .box-container{
+                display: flex;
+                flex-direction: row;
+                margin-bottom: 12px;
+                align-items: center;
+            }
+            .title {
+                text-align: left;
+                color: soild black;
+                margin-right: 12px;
+            }
+            .date {
+                color:#6f6f6f;
+                font-size: 0.8rem;
+            }
+            .article {
+                color: black;
+                font-size: 0.9rem;
+            }
+            .person {
+                color: black;
+                font-size: 0.8rem;
+                margin-top: 12px;
+            }
+
+            /* 페이지네이션 코드 */
+            .pagination a.active {
+             background-color: #4CAF50;
+            color: white;
+            }
+            .page{
+                display: flex;
+                justify-content: center;
+            }
+            .pagination{
+                list-style: none;
+                display:inline-block;
+                padding: 0;
+                
+            }
+            .pagination li{
+                display: inline;
+                text-align: center;
+            }
+            .pagination a {
+                float: left;
+                display: block;
+                font-size: 14px;
+                text-decoration: none;
+                padding: 5px 12px;
+                color: #96a0ad;
+                line-height: 1.5;
+            }
+            .first {
+                margin-right: 50px;
+            }
+            .last{
+                margin-left: 50px;
+            }
+            .first:hover, .last:hover, .left:hover, .right:hover{
+                color: #2e9cdf;
+            }
+
+            .pagination a.active {
+                cursor: default;
+                color: #ffffff;
+                outline: none;
+            }
+            .modal .num {
+                margin-left: 10px;
+                padding: 0;
+                width: 30px;
+                height: 30px;
+                line-height: 30px;
+                -moz-border-radius: 100%;
+                -webkit-border-radius: 100%;
+                border-radius: 100%;
+            }
+            .modal .num:hover {
+                background-color: #2e9cdf;
+                color: #ffffff;
+            }
+            .modal .num.active, .modal .num:active {
+                background-color: #2e9cdf;
+                cursor: pointer;
+            }
+            .arrow-left {
+                width: 0;
+                height: 0;
+                border-top: 10px soild transparent;
+                border-bottom: 10px soild transparent;
+                border-right: 10px solid blue;
+            }
+            h1 {
+                font-size: 40px;
+                background: linear-gradient(to right top, lightblue, lightgreen);
+                color: transparent;
+                -webkit-background-clip: text;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>카운슬링 프로젝트</h1>
+        <!-- <a class="post-item" href="/post/1">
+            <div class="box-container">
+                <div class="title"> <strong>하 CTQ 나가고싶다</strong>
+                </div>
+                <div class="date">
+                    <div>2022.08.12</div>
+                </div>
+            </div>
+            <div class="article">                    
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.m, repellat quidem explicabo cum. 
+            </div>
+            <div class="person">조부민</div>
+        </a> -->
+        
+
+        
+        <div id="list"></div>
+        <div class="page">
+            <ul class="pagination modal">
+            <li><a href="#" class="arrow left"> <- </a></li>
+            <li><a href="#" class="active num">1</a></li>
+            <li><a href="#" class="num">2</a></li>
+            <li><a href="#" class="num">3</a></li>
+            <li><a href="#" class="num">4</a></li>
+            <li><a href="#" class="num">5</a></li>
+            <li><a href="#" class="arrow right"> -> </a></li>
+        </ul>
+        </div>
+        <script src="./9.16_동아리.js"></script>
+    </body>
+    <a id="template" class="post-item" href="/post/1">
+        <div class="box-container">
+            <div class="title"> <strong>하 CTQ 나가고싶다</strong>
+            </div>
+            <div class="date">
+                <div>2022.02</div>
+            </div>
+        </div>
+        <div class="article">                    
+        Lorem ipsum dolor sit amet consectetur adipisicing elit.m, repellat quidem explicabo cum. 
+        </div>
+        <div class="person">조부민</div>
+    </a>
+    <!-- <ul id="template" class="list-item">
+        <div class="title"></div>
+        <div class="content"></div>
+    </ul> -->
+</html>
